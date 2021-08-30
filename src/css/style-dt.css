@@ -1,0 +1,516 @@
+
+ 
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+ 
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+ 
+/* Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+ 	body{
+		margin:0;
+		padding:0;
+	}
+ .hint{
+ width:30%;
+ margin-left:20%;}
+}
+ .nutqua{
+width:30%;
+position:relative;
+ margin-top:25%;
+ margin-left:-32%;}
+ 	.lc{margin:-35% auto 1% 0.7%;}
+	.chu{
+		font-family: Work Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: -0.02em;
+
+color: #FFFFFF;
+	}
+	.tron{display:none;}
+	.logo1{
+	width:250%;margin-left:-175%;margin-top:-240%;}
+		.ngay{margin-left:-175%;margin-top:-45%;width:230%;}
+		.chutim{
+		font-family: Work Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 15px;
+padding:2%;
+		width:200%;
+		margin-left:-160%;}
+		.kkc{
+			width:500%;
+		margin:-760% 10% 1% -900%;   position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+	animation-direction: alternate;}
+	@keyframes example {
+  0%   { left:0px; top:0px;}
+  25%  { left:20px; top:-20px;}
+  50%  { left:20px; top:0px;}
+  75%  {left:0px; top:10px;}
+  100% { left:5px; top:0px;}
+}
+	.hop1{width:100%}
+	.hop2{width:140%; margin-top:5%;}
+	.hop3{width:100%}
+	.chu-bt{
+		font-style: normal;
+font-weight: bold;
+font-size: 8px;
+line-height: 15px;
+letter-spacing: -0.02em;
+
+color: #FFFFFF;
+text-align:center;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+	margin: 0px 10px;}
+		.mo1{
+		display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 1px 5px 1px 5px;
+
+position: absolute;
+width: 25%;
+height: 4%;
+border:1px solid #5991FF;
+ -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+
+background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%), radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), #5991FF;
+/* 3D shadow */
+
+box-shadow: 4px 38px 62px rgba(0, 0, 0, 0.5);
+border-radius: 109px;
+left:13%;
+
+	}
+	.mo2{
+		display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 10px;
+
+position: absolute;
+width: 25%;
+height: 4%;
+		background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%), radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), #4C43CD;
+/* 3D shadow */
+
+box-shadow: 4px 38px 62px rgba(0, 0, 0, 0.5);
+border-radius: 109px;
+margin:-7% auto 0 3%;
+border:1px solid #4C43CD;
+	}
+	.mo3{
+		display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 10px;
+
+position: absolute;
+width: 25%;
+height: 4%;
+margin-left:-1%;
+border:1px solid #FF4768;
+
+
+background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%), radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), #FF4768;
+/* 3D shadow */
+
+box-shadow: 4px 38px 62px rgba(0, 0, 0, 0.5);
+	border-radius: 109px;}
+	.bg{background:url('images/bg.png'),url('images/nentoi.png');
+
+position:relative;
+	height:70vh;
+	width:100vw;
+	margin-bottom:5%;
+	 background-blend-mode:overlay;
+   background-repeat:no-repeat;
+   background-size: 100% 100%;}
+   @keyframes switchOff {
+  from {
+  
+  
+  }
+  to {
+	  position:relative;
+  background:url('images/tia.png');
+  background-repeat:no-repeat;
+   background-size: 100% 100%;
+   height:100%;
+  
+   
+  }
+}
+.khung{
+	margin-top:3.5%;
+background:url(images/mask.png);
+ background-repeat:no-repeat;
+ background-position: center;
+ background-size: 70% 70%;}
+ 	.chu-st{
+		font-family: Work Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 30px;
+text-align: center;
+letter-spacing: -0.02em;
+margin-top:-0.6%;
+/* OffWhite */
+
+color: #FFFFFF;
+	}
+		.chu-t{
+		font-family: Work Sans;
+font-style: normal;
+
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+letter-spacing: -0.02em;
+margin-top:-2%;
+/* OffWhite */
+
+color: #FFFFFF;
+	}
+	 .hinhtron{
+	 display:none;
+	
+ }
+ .giaithuong{position:absolute;z-index:1; margin-left:20%;width:60%;}
+  .vien{
+	 border:2px solid #f3d;
+	 margin:10% auto 1% 0%;
+	 border-width:130%;
+	 border-radius:20px;
+ }
+ .gt{
+	font-family: Work Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 10px;
+line-height: 18px;
+text-align: center;
+letter-spacing: -0.02em;
+
+color: #000000;}
+.carousel-inner img {
+  max-height: 80%;
+  margin: auto auto;
+  max-width: 80%;
+}
+.nnq{margin-left:25%;margin-bottom:4%;margin-top:-2%;}
+.dodai{width:90%;margin-left:-10%;}
+.linep{display:none;}
+.ft{width:80%; background-position:center; margin:auto 6% 5% 8%;}
+.lggb{margin:4% 0 auto 43%; width:10%;}
+
+.logo{
+	font-family: UTM Swiss Condensed;
+font-style: normal;
+font-weight: bold;
+font-size: 8px;
+line-height: 14px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.02em;
+margin-left:-2%;
+margin-top:-15%;
+margin-bottom:10%;
+}
+
+.modal-content {
+	
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+
+height:65%;
+  width: 60.8%;
+   border-radius: 25px;
+
+  
+}
+.khung-bg2{
+	
+	
+	
+	 background:url(images/khung.png);
+  background-repeat:no-repeat;
+  background-size:contain;
+  width: 55.8%;
+  height:33.5%;
+}
+.lsqua{
+	font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 10px;
+line-height: 15px;
+/* or 16px */
+margin-left:9%;
+letter-spacing: 0.374px;
+
+color: #000000;
+}
+.anhqua{width:120%;}
+.nqnn{
+	font-family: Work Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 10px;
+letter-spacing: -0.02em;
+padding:2%;
+color: #FFFFFF;
+width:105%;
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0 0;
+border:1px solid #FF4768;
+background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%), radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), #FF4768;
+border-radius: 109px;}
+.anh-nho{width:40%; margin-left:22%;margin-top:-10%;}
+ .tb{
+		 font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 11px;
+line-height: 12px;
+text-align: center;
+letter-spacing: 0.374px;
+
+/* BigC Red */
+
+	 color: #BC1E2C;}
+	 .ncs{
+	background: #314691;
+border-radius: 14px;
+width:90%;
+margin-left:5%;
+}
+.cs{
+		 font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 10px;
+line-height: 16px;
+/* identical to box height, or 129% */
+padding:5px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.408px;
+width:90%;
+/* Label Dark / Primary */
+
+color: #FFFFFF;}
+.nqn{
+	font-family: Work Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 10px;
+line-height: 5px;
+letter-spacing: -0.02em;
+
+color: #FFFFFF;
+
+text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0 25%;
+background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) 86.18%), radial-gradient(65.28% 65.28% at 26.39% 20.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%), #FF4768;
+border-radius: 109px;}
+.nhap{font-size:8px; height:7%;}
+.ht{margin-top:5%;}
+.ch{
+	font-family: Work Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+text-align: center;
+letter-spacing: -0.02em;
+margin:10% auto;
+color: #000000;}
+.nchoi{
+font-family: Work Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 10px;
+line-height: 14px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+
+/* Black */
+
+color: #0D0C22;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 20px;
+/* Inside Auto Layout */
+width:80%;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 2% auto;
+
+border-radius: 25px;}
+.zoom-button{
+	position:relative;
+
+}
+.zoom-button:hover {
+		position:relative;filter:brightness(150%);
+  width:60%;
+}
+.cm{
+	font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 124.37%;
+/* or 30px */
+margin-top:2%;
+margin-left:5%;
+text-align: center;
+letter-spacing: 0.374px;
+
+/* BigC Red */
+
+color: #BC1E2C;}
+.phao{
+  animation: no 1s infinite ;
+ width:18%;position:absolute; top:34%;
+}
+.qcm{
+	
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 8px;
+line-height: 110.93%;
+/* identical to box height, or 16px */
+
+text-align: center;
+letter-spacing: 0.374px;
+
+color: #000000;}
+
+.chucm{
+font-family: Ubuntu;
+font-style: normal;
+font-weight: bold;
+font-size: 8px;
+line-height: 15px;
+/* identical to box height, or 129% */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.408px;
+
+/* Label Dark / Primary */
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 2px 40px;
+/* Inside Auto Layout */
+width:80%;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 1% auto;
+
+border-radius: 14px;}
+.ib{
+background: #EF5DA8;}
+.choit{
+	background: #5D5FEF;
+}
+.cstl{background: #314691;}
+}
+}
+/* Portrait */
+@media only screen
+and (min-device-width: 420px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+
+}
+ 
+/* Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+ 
+}
