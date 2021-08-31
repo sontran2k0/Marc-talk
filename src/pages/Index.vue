@@ -1,64 +1,77 @@
 <template>
   <q-card>
-  <q-card class="ses1" style="height: 100vh">
+  <q-card class="ses1 " style="height: 140vh">
     <!-- <div class="bg"></div> -->
+    <div class="tia">
+     
     <div class="row q-pt-xl q-pl-xl q-gutter-sm" style="width: 300px">
-      <div class="col-4 q-mb-lg">
-        <q-btn round @click="qd = true        ">
-          <img src="~assets/hint.png">
+      <div class="col-4 q-mb-lg ">
+        <q-btn round @click="qd = true        " class="glow">
+          <img src="~assets/hint.png"> 
         </q-btn>
+        <img src="~assets/tron.png" style="position:absolute; margin:2.5% auto 0 8%; animation: mymove 10s infinite;">
       </div>
-      <div class="col-4 luat">Luật chơi</div>
+      <div class="col-4 luat"></div>
       <div class="col-4" @click="history = true">
         <q-btn round>
-          <img src="~assets/qua.png">
+          <img src="~assets/qua.png" class="glow">
+          
         </q-btn>
+         
       </div>
-      <div class="col-5 luat">Lịch sử quà</div>
+      <div class="col-5 luat"></div>
+      
     </div>
     <div class="absolute-center" style="top: 200px">
       <img src="~assets/logo.png">
+      <img src="~assets/kkc.png" class="kkc" >
+   
       <div class="luat">Minigame 31.08 - 10.09-2021</div>
       <div class="bg-white text-primary luat text-center q-mt-lg" style="height:45px; width:350px; border-radius:100px;">
-        <span>Bạn còn</span>
+        <span>Bạn còn </span>
         <span class="text-red q-ma-xs"> {{ turn }} </span>
-        <span>lượt chơi</span>
+        <span> lượt chơi</span>
       </div>
+
     </div>
+    
     <div class="row flex flex-center q-gutter-xl" style="margin-top: 120px">
       <q-btn padding="none" round class="col-2" style="height: 1px; margin-right: 100px" @click="handleClick">
-        <img src="~assets/hop1.png">
+        <img src="~assets/lbox.gif">
       </q-btn>
       <q-btn padding="none" flat class="col-2" style="height: 1px; margin-right: 100px" @click="handleClick">
-        <img src="~assets/hop2.png">
+        <img src="~assets/mbox.gif">
       </q-btn>
       <q-btn padding="none" round class="col-2" style="height: 1px"  @click="handleClick">
-        <img src="~assets/hop3.png">
+        <img src="~assets/rbox.gif">
       </q-btn>
     </div>
     <div class="row flex flex-center q-gutter-xl" style="margin-top: 200px">
-      <q-btn no-caps padding="xs" rounded class="col-2 mo q-mr-xl" color="blue-6" style="margin-right: 100px"  @click="handleClick">
+      <q-btn no-caps padding="xs" rounded class="col-2 mo q-mr-xl blur " color="blue-6" style="margin-right: 80px;width:300px;"  @click="handleClick">
         Mở "Tưởng tượng"
       </q-btn>
-      <q-btn no-caps padding="xs" rounded class="col-2 mo q-mr-xl" color="indigo-5" style="margin-right: 100px"  @click="handleClick">
+      <q-btn no-caps padding="xs" rounded class="col-2 mo q-mr-xl blur" color="indigo-5" style="margin-right: 80px;width:300px"  @click="handleClick">
         Mở "Phân tích"
       </q-btn>
-      <q-btn no-caps padding="xs" rounded class="col-2 mo" color="pink-4"  @click="handleClick">
+      <q-btn no-caps padding="xs" rounded class="col-2 mo blur" color="pink-4" style="width:300px" @click="handleClick">
         Mở "May mắn"
       </q-btn>
     </div>
+    </div>
     </q-card>
+ 
 
     <q-card class="ses2 flex flex-center">
       <div class="ts">
-        <img src="~assets/talkshow.png" style="max-width: 50vw">
+        <img src="~assets/stts.png" style="max-width: 50vw">
+        
       </div>
       <div class="giaithuong">
-        <img src="~assets/giaithuong.png" style="max-width: 35vw">
+        <img src="~assets/giaithuong.png" style="max-width: 35vw;margin: 8% auto 0 auto;">
       </div>
-      <q-card class="gt">
-        <div class="q-mt-xl" >
-          <img src="~assets/groupqua.png" style="max-width: 70vw">
+      <q-card class="gt" style="border-radius:20px;">
+        <div class="q-mt-xl"  >
+          <img src="~assets/phanqua.png" style="max-width: 70vw">
         </div>
         <q-carousel
         padding
@@ -71,7 +84,7 @@
       >
         <q-carousel-slide :name="1">
           <div>
-            <img src="~assets/nt/group28.png" style="max-width: 60vw">
+            <img src="~assets/nt/group28.png" style="max-width: 30vw">
           </div>
         </q-carousel-slide>
         <q-carousel-slide :name="2">
@@ -151,17 +164,23 @@
         </q-carousel-slide>
       </q-carousel>
       </q-card>
-      <div style="position: absolute; bottom: 0px" class="q-mb-xl">
-        <img src="~assets/ft.png" style="max-width: 80vw">
-      </div>
+      
     </q-card>
   </q-card>
-
+<div style="position: relative; bottom: 0px; " class="q-mb-xl">
+        <img src="~assets/ftt.png" style="max-width: 160vw;margin:5% auto auto 10%; background-size: 180% 30%;">
+           <div align="right" id="pageAudio">
+      <button id="playpausebtn" class="glow" ></button></div>
+      </div>
   <div>
       <q-dialog v-model="signIn">
         <div style="width: 400px">
           <img src="~assets/tt.png" style="z-index=-1" class="absolute-center">
         <q-card-section>
+          	<div class="row">
+
+	
+	</div>
         <q-form
               ref="info"
               class="form-wrapper q-gutter-md"
@@ -199,17 +218,23 @@
               </div>
             </q-form>
           </q-card-section>
-          <q-card-actions align="center">
+          <q-card-actions align="center" style="min-height:100px;">
             <q-btn
+            rounded
+            style="width:250px;height:10px;margin:0% 0 3 0%;"
               flat
               @click="handleSignIn"
-              class="submit"
+              class="submit blur"
             >
-            <img src="~assets/nhanqua.png">
+            <img src="~assets/nhanqua.svg" style="margin:-4% auto 2% 0; ">
             </q-btn>
+            	
+	
           </q-card-actions>
         </div>
+        
       </q-dialog>
+     
     </div>
 
     <div>
@@ -224,28 +249,25 @@
               rounded
               :label="formGame.A"
               @click="handleSelect1"
-              class="text-weight-bold q-mb-md"
+              class="cauA text-weight-bold q-mb-md blur"
               style="width: 350px"
-              :class="cA"
             >
             </q-btn>
             <q-btn
               rounded
               :label="formGame.B"
               @click="handleSelect2"
-              class="text-weight-bold q-mb-md"
+              class="cauC text-weight-bold q-mb-md blur"
               style="width: 350px"
-              :class="cB"
             >
             </q-btn>
             <q-btn
               rounded
               :label="formGame.C"
               @click="handleSelect3"
-              class="text-weight-bold q-mb-md"
+              class="cauD text-weight-bold q-mb-md blur"
               style="width: 350px"
               v-if="formGame.C"
-              :class="cC"
             >
             </q-btn>
           </q-card-actions>
@@ -281,11 +303,13 @@
           </div>
           <q-card-actions align="center">
             <q-btn
+            rounded
               flat
+              class=" blur"
               @click="handleSignIn"
-              style="margin-top: 100px"
+              style="margin-top: 100px ;width:250px;height:10px;margin-bottom:2%;"
             >
-              <img src="~assets/chiase.png">
+              <img src="~assets/chiase.png" >
             </q-btn>
           </q-card-actions>
         </div>
@@ -299,8 +323,9 @@
           <q-card-actions align="center">
             <q-btn
               flat
-              @click="qd = false"
-              style="margin-bottom: 20px; margin-left: 400px"
+              rounded
+              @click="qd = false" 
+              style="margin-bottom: 20px;margin-top:-40px; margin-left: 400px;width:250px;height:30px;"
             >
               <img src="~assets/close.png">
             </q-btn>
@@ -377,10 +402,12 @@
           <q-card-actions align="center">
             <q-btn
               flat
-              @click="afterShareSai"
-              style="margin-top: 400px"
+              rounded
+               class=" blur"
+              @click="handleSignIn"
+              style="margin-top: 400px ;width:250px;height:20px;margin-bottom:2%;"
             >
-              <img src="~assets/share.png">
+              <img src="~assets/share.svg">
             </q-btn>
           </q-card-actions>
         </div>
@@ -412,26 +439,35 @@
           </div>
           <q-card-actions align="center">
             <q-btn
+            rounded
               flat
+               style="width:250px;height:10px;margin-bottom:2%;"
+               class=" blur"
               @click="fanpage"
             >
-              <img src="~assets/inbox.png">
+              <img src="~assets/inbox.svg">
             </q-btn>
           </q-card-actions>
           <q-card-actions align="center">
             <q-btn
+            rounded
               flat
+               style="width:250px;height:10px;margin-bottom:2%;"
+               class=" blur"
               @click="onReset"
             >
-              <img src="~assets/choitiep.png">
+              <img src="~assets/choitiep.svg">
             </q-btn>
           </q-card-actions>
           <q-card-actions align="center">
             <q-btn
               flat
+              rounded
+               class=" blur" 
+                style="width:250px;height:10px;margin-bottom:2%;"
               @click="handleSignIn"
             >
-              <img src="~assets/chiase.png">
+              <img src="~assets/chiase.svg">
             </q-btn>
           </q-card-actions>
         </div>
@@ -475,9 +511,6 @@ export default defineComponent({
       code: null,
       qua: null,
       pre: null,
-      cA: null,
-      cB: null,
-      cC: null,
       boCauHoi: [
         {
           ques: "Chương trình “Sáng tạo hay tạo sảng?” là mùa thứ mấy của dự án Marketer Talk ?",
@@ -563,17 +596,14 @@ export default defineComponent({
   },
   methods: {
     async handleSignIn() {
-      this.$refs.info.validate().then(async success => {
-        if (!success) return;
-        const user = await apiServiceInstance.signIn(this.form.email, this.form.phone)
-        this.email = user.email
-        this.turn = user.turn
-        LocalStorage.set('email', user.email)
-        LocalStorage.set('turn', user.turn)
-        this.turn = LocalStorage.getItem('turn')
-        this.signIn = false;
-        this.handleOpenGame();
-      });
+      const user = await apiServiceInstance.signIn(this.form.email, this.form.phone)
+      this.email = user.email
+      this.turn = user.turn
+      LocalStorage.set('email', user.email)
+      LocalStorage.set('turn', user.turn)
+      this.turn = LocalStorage.getItem('turn')
+      this.signIn = false;
+      this.handleOpenGame();
     },
     handleOpenShare() {
       this.share = true;
@@ -598,9 +628,6 @@ export default defineComponent({
       const random = Math.floor(Math.random() * 6)
       this.formGame = this.boCauHoi[random]
       this.game = true;
-      this.cA = "choncau";
-      this.cB = "choncau";
-      this.cC = "choncau"
     },
     async handleOpenDung() {
       const prize = await apiServiceInstance.prize(this.email)
@@ -611,81 +638,37 @@ export default defineComponent({
     },
     async handleSelect1() {
       if (this.formGame.rs === 1) {
-        this.aDung()
-        setTimeout(this.handleOpenDung, 2000)
-        setTimeout(this.handleCloseGame, 3000)
+        this.game = false;
+        await this.handleOpenDung();
+        this.dung = true
       } else {
-        if(this.formGame.rs === 2) {
-          this.bDung()
-          setTimeout(this.handleOpenDung, 2000)
-          setTimeout(this.handleCloseGame, 3000)
-        } else {
-          this.cDung()
-          setTimeout(this.handleOpenDung, 2000)
-          setTimeout(this.handleCloseGame, 3000)
-        }
+        this.game = false;
+        this.sai = true
       }
     },
     async handleSelect2() {
       if (this.formGame.rs === 2) {
-        this.bDung()
-        setTimeout(this.handleOpenDung, 2000)
-        setTimeout(this.handleCloseGame, 3000)
+        this.game = false;
+        await this.handleOpenDung();
+        this.dung = true
       } else {
-        if(this.formGame.rs === 1) {
-          this.aDung()
-          setTimeout(this.handleOpenSai, 2000)
-          setTimeout(this.handleCloseGame, 3000)
-        } else {
-          this.cDung()
-          setTimeout(this.handleOpenSai, 2000)
-          setTimeout(this.handleCloseGame, 3000)
-        }
+        this.game = false;
+        this.sai = true
       }
     },
     async handleSelect3() {
+      this.game = false;
       if (this.formGame.rs === 3) {
-        this.cDung()
-        setTimeout(this.handleOpenDung, 2000)
-        setTimeout(this.handleCloseGame, 3000)
+        this.game = false;
+        await this.handleOpenDung();
+        this.dung = true
       } else {
-        if(this.formGame.rs === 1) {
-          this.aDung()
-          setTimeout(this.handleOpenSai, 2000)
-          setTimeout(this.handleCloseGame, 3000)
-        } else {
-          this.bDung()
-          setTimeout(this.handleOpenSai, 2000)
-          setTimeout(this.handleCloseGame, 3000)
-        }
+        this.game = false;
+        this.sai = true
       }
     },
-    handleCloseGame() {
-      this.game = false
-    },
-    handleOpenSai() {
-      this.sai = true;
-    },
-    afterShareSai() {
-      this.game = true;
-    },
     fanpage() {
-      window.open("https://www.facebook.com/MarC.Marketertalks");
-    },
-    aDung() {
-      this.cA = "chondung"
-      this.cB = "chonsai"
-      this.cC = "chonsai"
-    },
-    bDung() {
-      this.cA = "chonsai"
-      this.cB = "chondung"
-      this.cC = "chonsai"
-    },
-    cDung() {
-      this.cA = "chonsai"
-      this.cB = "chonsai"
-      this.cC = "chondung"
+      window.open("https://www.facebook.com/MarC.NonstopCreativity");
     },
     onReset() {
       this.dung = false,
@@ -702,6 +685,33 @@ export default defineComponent({
     }
   }
 })
+
+// am thanh
+var audio, playbtn,  seek_bar;
+function initAudioPlayer(){
+	audio = new Audio();
+	audio.src = "https://www.soundjay.com/free-music/midnight-ride-01a.mp3";
+	audio.loop = true;
+	audio.play();
+	// Set object references
+	playbtn = document.getElementById("playpausebtn");
+	
+	// Add Event Handling
+	playbtn.addEventListener("click",playPause);
+	
+	// Functions
+	function playPause(){
+		if(audio.paused){
+		    audio.play();
+		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/189/189889.svg) no-repeat";
+	    } else {
+		    audio.pause();
+		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148744.svg) no-repeat";
+	    }
+	}
+	
+}
+window.addEventListener("load", initAudioPlayer);
 </script>
 
 <style>
@@ -710,16 +720,16 @@ export default defineComponent({
     font-size: 30px;
     color: white;
   }
-  .choncau{
+  .cauA{
     background: radial-gradient(farthest-corner at 0px 1px,white 1%, #FF9DE9 100%);
   }
   .cauB{
     background: radial-gradient(farthest-corner at 0px 1px,white 1%, #FFC3F2 100%);
   }
-  .chondung{
+  .cauC{
     background: radial-gradient(farthest-corner at 0px 1px,white 1%, #007AFF 100%);
   }
-  .chonsai{
+  .cauD{
     background: radial-gradient(farthest-corner at 0px 1px,white 1%, #FF0000 100%);
   }
   .hoi{
@@ -729,8 +739,18 @@ export default defineComponent({
   }
   .mo{
     font-family: Work Sans;
-    font-size: 25px;
+    font-weight: bold;
+font-size: 25px;
+
+    padding:  20% 50%;
     color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+   line-height: 80px;
+text-align: center;
+letter-spacing: -0.02em;
+margin-top:5%;
+border-radius:109px;
+
   }
   .ses1{
     background:url('~assets/background.png');
@@ -739,11 +759,12 @@ export default defineComponent({
     z-index: 1;
     background-repeat: no-repeat; 
     background-size: cover;
+    margin-top: -2%;
   }
   .ses2{
     background-image:url('~assets/bg2.png');
     position:relative;
-    height:120vh;
+    height:150vh;
     z-index: 0;
     width:100vw;
     background-repeat:none;
@@ -763,7 +784,9 @@ export default defineComponent({
     position: absolute;
     top: 300px;
     width: 80vw;
-    height: 50vh;
+    min-height: 50vh;
+    border:1px solid #fff;
+    border-radius:20px;
   }
   .prize{
     font-family: Montserrat;
@@ -773,4 +796,60 @@ export default defineComponent({
     font-family: Montserrat;
     font-size: 25px;
   }
+  .glow:hover {
+  filter:brightness(130%);
+}
+.tia{
+
+		  -webkit-animation: switchOff 300ms linear infinite alternate;
+	animation: switchOff 300ms linear infinite alternate;}@keyframes switchOff {
+  from {
+  
+  
+  }
+  to {
+	  position:relative;
+  background:url('~assets/tia.png');
+   background-repeat:no-repeat;
+  
+   background-size:100% 98%;
+   height:108%;
+  
+   
+  }}
+  .kkc{
+		
+  animation-name: example;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+	animation-direction: alternate;}
+@keyframes example {
+  0%   { left:0px; top:0px;}
+  10%  { left:50px; top:-10px;}
+  25%  { left:120px; top:30px;}
+  50%  { left:50px; top:70px;}
+  75%  {left:10px; top:30px;}
+  100% { left:0px; top:0px;}
+}
+
+@keyframes mymove {
+  100% {transform: rotate(360deg);}
+}
+.blur:hover{
+   border: 1px solid #fff;
+  filter:brightness(130%);
+  box-shadow: 10px 10px 20px rgb(155, 60, 236);
+}
+#pageAudio{
+	width:90%; margin:auto; padding:10px;
+}
+#playpausebtn{
+  background:url(https://image.flaticon.com/icons/svg/189/189889.svg) no-repeat;
+	width:40px;
+  border-radius:50px;
+	height:40px; margin-top:3%;
+}
+
 </style>
