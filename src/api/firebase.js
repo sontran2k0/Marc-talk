@@ -65,31 +65,31 @@ class APIService {
         res = { des: "Chuột Logiech M221", code: LGT[countLGT - 1], pre: 1}
       }
       if (perLGT < random && random <= perBAV) {
-        setDoc(ref, { countBAV: countBAV - 1}, {merge: true});
+        setDoc(ref, { countBAV: countBAV - 1, count: count - 1}, {merge: true});
         res = { des: "Vouchers 1.000.000 VNĐ và suất test đầu vào miễn phí cũng thầy Charles", code: BAV[countBAV - 1], pre: 0}
       }
       if (perBAV < random && random <= perVFM) {
-        setDoc(ref, { countVFM: countVFM - 1}, {merge: true});
+        setDoc(ref, { countVFM: countVFM - 1, count: count - 1}, {merge: true});
         res = { des: "Tài khoản VIP sử dụng ứng dụng Voiz FM", code: VFM[countVFM - 1], pre: 0}
       }
       if (perVFM < random && random <= perVS100) {
-        setDoc(ref, { countVS100: countVS100 - 1}, {merge: true});
+        setDoc(ref, { countVS100: countVS100 - 1, count: count - 1}, {merge: true});
         res = { des: "Vouchers 100% sử dụng Khóa Kỹ Năng Giao Tiếp của Vietskill", code: VS100[countVS100 - 1], pre: 0}
       }
       if (perVS100 < random && random <= perVS50) {
-        setDoc(ref, { countVS50: countVS50 - 1}, {merge: true});
+        setDoc(ref, { countVS50: countVS50 - 1, count: count - 1}, {merge: true});
         res = { des: "  Vouchers 50% sử dụng Khóa Kỹ Năng Giao Tiếp của Vietskill", code: VS50[countVS50 - 1], pre: 0}
       }
       if (perVS50 < random && random <= perVXR50) {
-        setDoc(ref, { countVXR50: countVXR50 - 1}, {merge: true});
+        setDoc(ref, { countVXR50: countVXR50 - 1, count: count - 1}, {merge: true});
         res = { des: "Vouchers 50% sử dụng ứng dụng VeXeRe", code: VXR50[countVXR50 - 1], pre: 0}
       }
       if (perVXR50 < random && random <= perVXR20) {
-        setDoc(ref, { countVXR20: countVXR20 - 1}, {merge: true});
+        setDoc(ref, { countVXR20: countVXR20 - 1, count: count - 1}, {merge: true});
         res = { des: "Vouchers 20% sử dụng ứng dụng VeXeRe", code: VXR20[countVXR20 - 1], pre: 0}
       }
       if (perVXR20 < random && random <= perVXR10) {
-        setDoc(ref, { countVXR10: countVXR10 - 1}, {merge: true});
+        setDoc(ref, { countVXR10: countVXR10 - 1, count: count - 1}, {merge: true});
         res = { des: "Vouchers 10% sử dụng ứng dụng VeXeRe", code: VXR10[countVXR10 - 1], pre: 0}
       }
     }
