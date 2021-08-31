@@ -105,6 +105,12 @@ class APIService {
     const des = user.data().des
     des.push(res.des)
     await setDoc(doc(this.firebaseDb, "clients", uid), {code: code, des: des}, {merge: true})
+    const a = await addDoc(collection(this.firebaseDb, "delivered"), {
+      email: email,
+      des: res.des,
+      code: res.code
+    })
+    console.log(a,"ASDASD")
     return res
   }
 };

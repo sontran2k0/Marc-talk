@@ -224,25 +224,28 @@
               rounded
               :label="formGame.A"
               @click="handleSelect1"
-              class="cauA text-weight-bold q-mb-md"
+              class="text-weight-bold q-mb-md"
               style="width: 350px"
+              :class="cA"
             >
             </q-btn>
             <q-btn
               rounded
               :label="formGame.B"
               @click="handleSelect2"
-              class="cauC text-weight-bold q-mb-md"
+              class="text-weight-bold q-mb-md"
               style="width: 350px"
+              :class="cB"
             >
             </q-btn>
             <q-btn
               rounded
               :label="formGame.C"
               @click="handleSelect3"
-              class="cauD text-weight-bold q-mb-md"
+              class="text-weight-bold q-mb-md"
               style="width: 350px"
               v-if="formGame.C"
+              :class="cC"
             >
             </q-btn>
           </q-card-actions>
@@ -374,7 +377,7 @@
           <q-card-actions align="center">
             <q-btn
               flat
-              @click="handleSignIn"
+              @click="afterShareSai"
               style="margin-top: 400px"
             >
               <img src="~assets/share.png">
@@ -472,6 +475,9 @@ export default defineComponent({
       code: null,
       qua: null,
       pre: null,
+      cA: null,
+      cB: null,
+      cC: null,
       boCauHoi: [
         {
           ques: "Chương trình “Sáng tạo hay tạo sảng?” là mùa thứ mấy của dự án Marketer Talk ?",
@@ -557,14 +563,17 @@ export default defineComponent({
   },
   methods: {
     async handleSignIn() {
-      const user = await apiServiceInstance.signIn(this.form.email, this.form.phone)
-      this.email = user.email
-      this.turn = user.turn
-      LocalStorage.set('email', user.email)
-      LocalStorage.set('turn', user.turn)
-      this.turn = LocalStorage.getItem('turn')
-      this.signIn = false;
-      this.handleOpenGame();
+      this.$refs.info.validate().then(async success => {
+        if (!success) return;
+        const user = await apiServiceInstance.signIn(this.form.email, this.form.phone)
+        this.email = user.email
+        this.turn = user.turn
+        LocalStorage.set('email', user.email)
+        LocalStorage.set('turn', user.turn)
+        this.turn = LocalStorage.getItem('turn')
+        this.signIn = false;
+        this.handleOpenGame();
+      });
     },
     handleOpenShare() {
       this.share = true;
@@ -589,6 +598,9 @@ export default defineComponent({
       const random = Math.floor(Math.random() * 6)
       this.formGame = this.boCauHoi[random]
       this.game = true;
+      this.cA = "choncau";
+      this.cB = "choncau";
+      this.cC = "choncau"
     },
     async handleOpenDung() {
       const prize = await apiServiceInstance.prize(this.email)
@@ -599,37 +611,81 @@ export default defineComponent({
     },
     async handleSelect1() {
       if (this.formGame.rs === 1) {
-        this.game = false;
-        await this.handleOpenDung();
-        this.dung = true
+        this.aDung()
+        setTimeout(this.handleOpenDung, 2000)
+        setTimeout(this.handleCloseGame, 3000)
       } else {
-        this.game = false;
-        this.sai = true
+        if(this.formGame.rs === 2) {
+          this.bDung()
+          setTimeout(this.handleOpenDung, 2000)
+          setTimeout(this.handleCloseGame, 3000)
+        } else {
+          this.cDung()
+          setTimeout(this.handleOpenDung, 2000)
+          setTimeout(this.handleCloseGame, 3000)
+        }
       }
     },
     async handleSelect2() {
       if (this.formGame.rs === 2) {
-        this.game = false;
-        await this.handleOpenDung();
-        this.dung = true
+        this.bDung()
+        setTimeout(this.handleOpenDung, 2000)
+        setTimeout(this.handleCloseGame, 3000)
       } else {
-        this.game = false;
-        this.sai = true
+        if(this.formGame.rs === 1) {
+          this.aDung()
+          setTimeout(this.handleOpenSai, 2000)
+          setTimeout(this.handleCloseGame, 3000)
+        } else {
+          this.cDung()
+          setTimeout(this.handleOpenSai, 2000)
+          setTimeout(this.handleCloseGame, 3000)
+        }
       }
     },
     async handleSelect3() {
-      this.game = false;
       if (this.formGame.rs === 3) {
-        this.game = false;
-        await this.handleOpenDung();
-        this.dung = true
+        this.cDung()
+        setTimeout(this.handleOpenDung, 2000)
+        setTimeout(this.handleCloseGame, 3000)
       } else {
-        this.game = false;
-        this.sai = true
+        if(this.formGame.rs === 1) {
+          this.aDung()
+          setTimeout(this.handleOpenSai, 2000)
+          setTimeout(this.handleCloseGame, 3000)
+        } else {
+          this.bDung()
+          setTimeout(this.handleOpenSai, 2000)
+          setTimeout(this.handleCloseGame, 3000)
+        }
       }
     },
+    handleCloseGame() {
+      this.game = false
+    },
+    handleOpenSai() {
+      this.sai = true;
+    },
+    afterShareSai() {
+      this.game = true;
+    },
     fanpage() {
-      window.open("https://www.facebook.com/MarC.NonstopCreativity");
+      window.open("https://www.facebook.com/MarC.Marketertalks");
+    },
+    aDung() {
+      this.cA = "chondung"
+      this.cB = "chonsai"
+      this.cC = "chonsai"
+    },
+    bDung() {
+      this.cA = "chonsai"
+      this.cB = "chondung"
+      this.cC = "chonsai"
+    },
+    cDung() {
+      this.cA = "chonsai"
+      this.cB = "chonsai"
+      this.cC = "chondung"
     },
     onReset() {
       this.dung = false,
@@ -654,16 +710,16 @@ export default defineComponent({
     font-size: 30px;
     color: white;
   }
-  .cauA{
+  .choncau{
     background: radial-gradient(farthest-corner at 0px 1px,white 1%, #FF9DE9 100%);
   }
   .cauB{
     background: radial-gradient(farthest-corner at 0px 1px,white 1%, #FFC3F2 100%);
   }
-  .cauC{
+  .chondung{
     background: radial-gradient(farthest-corner at 0px 1px,white 1%, #007AFF 100%);
   }
-  .cauD{
+  .chonsai{
     background: radial-gradient(farthest-corner at 0px 1px,white 1%, #FF0000 100%);
   }
   .hoi{
